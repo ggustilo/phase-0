@@ -1,11 +1,11 @@
-Reflections
+#Reflections
 
-1.1 Think About Time
+##1.1 Think About Time
 
 Phase 0, Dev Bootcamp 
 U1.W1: Thinking About Time Reflection
 
-Prompt:
+###Prompt:
 
 Which time management and productivity ideas did you learn about? 
 What is "Time Boxing?" How can you use it in Phase 0? 
@@ -14,7 +14,7 @@ Is your current strategy working? If not, why not?
 Can/will you employ any of them? If so, how? 
 What is your overall plan for Phase 0 time management?
 
-Reflection:
+###Reflection:
 
 After going through all the provided links, I was most intrigued by the techniques of meditation and the 'tiny habit.' Both are techniques that I have used effectively in the past. Meditation - taking a few minutes every day to focus and clear the mind - is good for de-stressing and encouraging creative receptivity. Using immediate rewards and breaking down larger tasks into small, achievable ones helps to turn tiny habits into larger, sustainable forms of self-discipline. As I am a very habit-oriented person, it is necessary for me to take conscious control of the development of good habits. In addition, I find meditation key for reducing stress and building capacity to focus.
 
@@ -28,12 +28,12 @@ In terms of techniques I will attempt to use to increase productivity, I think d
 
 To stay focused during Phase 0, I intend to maintain my habit of weekly schedules as well as daily plans. Using time blocks has always been very effective for me, so I will continue to use that technique. I also want to work in a short morning meditation.
 
-1.2 The Command Line
+##1.2 The Command Line
 
 Phase 0, Dev Bootcamp 
 U1.W1: Command Line Reflection
 
-Prompt:
+###Prompt:
 
 What is a shell? What is "bash?" 
 What was the most challenging for you in going through this material? 
@@ -41,7 +41,7 @@ Were you able to successfully use all of the commands?
 In your opinion, what are the most important arguments to know? 
 Can you remember what each of the [commands below] does off the top of your head? Write what each does.
 
-Reflection:
+###Reflection:
 
 A shell is a user-interface for a computer's operating system. Bash is a common text-based shell. Although I have some familiarity with using the command line, to be truly effective, it has to become second nature, which means practice. I'm glad that we are beginning Dev Bootcamp with this challenge. It is extremely important.
 
@@ -81,17 +81,17 @@ It also occurs to me that one of the biggest challenges in learning to program, 
 
 I, for one, need to check -pwd and -ls often because it helps me create a mental image of where I am. Similarly, when writing programs, I need to use GDP or another debugger and check my breakpoints frequently to understand how my input is changing through the program. I think being familiar with, and comfortable, with this abstraction is key to becoming a good programmer.
 
-1.3 Forking and Cloning
+##1.3 Forking and Cloning
 
 Phase 0, Dev Bootcamp 
 U1.W1: Create, Fork and Clone Repositories Reflection
 
-Prompt:
+###Prompt:
 
 If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one? 
 What struggles did you have setting up git and GitHub? What did you learn in the process?
 
-Reflection:
+###Reflection:
 
 A repository is essentially a directory or folder, just like on your own computer. It can contain files and other folders, and can be either public or private. If you wish to work on a repository, and you have the permissions to do so, it is advisable to create a separate copy of the repository to tinker with.
 
