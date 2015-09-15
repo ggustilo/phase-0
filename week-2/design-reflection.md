@@ -1,4 +1,4 @@
-<img src="./week-2/imgs/sitemap.jpg">
+<img src="../imgs/sitemap.jpg">
 
 #Site Map Reflection
 
