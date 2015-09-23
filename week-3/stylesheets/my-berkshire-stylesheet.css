@@ -1,0 +1,127 @@
+.debug {
+    border: 0px solid red;
+}
+
+* {
+    color:#000080;
+    background-color: white;
+    font-size: 8pt;
+}
+
+a:link {
+    color:#800080;
+    font-size: 1.5em;
+}
+
+a:visited {
+    color:#ff0000;
+    font-size: inherit;
+}
+
+.main-header {
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid black;
+    
+}
+
+.capital {
+    font-size: 1.75em;
+}
+
+.header-xl {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header-s {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header-m {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.span-s {
+    font-size: .5em;
+}
+
+.left-column {
+    float: left;
+    width: 40%;
+}
+
+.right-column {
+    float: right;
+    width: 40%;
+}
+
+.footer {
+    clear: both;
+}
+
+.geico-section {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 1em;
+}
+
+.short-text {
+    width: 35%;
+    margin: auto;
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.comments-section {
+    border-bottom: 1px solid black;
+}
+
+a.small_link {
+    font-size: 8pt;
+}
+
+
+/*
+
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+What CSS did you use to modify the element style (like size, color, etc.)
+Did you modify the HTML to include classes or ids? If so, which did you chose and why?
+If you didn't, how would you know which one to add to your HTML?
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+When you link an external file to and HTML file, it's important to know what the relationship is between the two files, what type of file it is, and where it is.
+
+For positioning we used float and clear, auto margins, and width percentages.  It took us a while to debug the float pieces, but eventually we figured it out.
+
+I used CSS to alter font-size, color, and borders.
+
+We did use a lot of classes, but no ids.  We decided not to use ids in order to reserve those for Javascript per the best practice referenced in the video.
+
+Usually, I would use ids for cases where certain formatting would only be used once.  But, classes seem equally useful for that, and then ids can be reserved for Javascript.
+
+I think our code is much cleaner.  First, we did not use inline CSS; second, I think our use of floats for positioning was a bit cleaner than their use of a table.  Also, I found their sizing really weird and deprecated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
