@@ -2,18 +2,20 @@
 <html>
 	<head>
 		<title>BERKSHIRE HATHAWAY INC.</title>
+		<link rel="stylesheet" type="text/css" href="../../week-3/stylesheets/my-berkshire-stylesheet.css">
 	</head>
 
 	<body>
-		<main>
-			<header>
-				<h1>BERKSHIRE HATHAWAY INC.</h1>
-				<h2>3555 Farnam Street Omaha, NE 68131</h2>
-				<h3>Official Home Page</h3>
-			<header>
-			<hr>
-
-			<ul>
+		<header class="main-header debug">
+            <h1 class="header-xl debug"><span class="capital">B</span>ERKSHIRE <span class="capital">H</span>ATHAWAY <span class="span-s">INC.</span></h1>
+            <h2 class="header-s debug">3555 Farnam Street</h2>
+            <h2 class="header-s debug">Omaha, NE 68131</h2>
+			<h3 class="header-m debug">Official Home Page</h3>
+        </header>
+	
+    	<main class="main">
+       		<div>
+			 <ul class="left-column debug">
 				<li><a href="#">A Message From Warren E. Buffett</a></li>
 				<li><a href="#">News Releases</a> Updated July 1, 2014</li>
 				<li><a href="#">Annual & Interim Reports</a> Updated May 2, 2014</li>
@@ -23,48 +25,38 @@
 				<li><a href="#">Corporate Governance</a></li>
 				<li><a href="#">Annual Meeting Information</a></li>
 				<li><a href="#">Links to Berkshire Subsidiary Companies</a></li>
-				<li><a href="#">Comparitive Rights and Relative Prices of CLass A and B Stock</a> Updated January 20, 2010</li>
-				<li><a href="#">Owner's Manual</a> To view the Owner's Manual you may use Adobe Acrobat@ Reader@ software. Click <a href="#">here</a> to download. Updated March 1, 2014</li>
+				<li><a href="#">Comparitive Rights and Relative Prices of Class A and B Stock</a> Updated January 20, 2010</li>
+             </ul>
+       		</div>
+            
+       		<div>
+             <ul class="right-column debug">
+				<li><a href="#">Owner's Manual</a> To view the Owner's Manual you may use Adobe Acrobat@ Reader@ software. Click <a href="#"class="small_link">here</a> to download. Updated March 1, 2014</li>
 				<li><a href="#">Order Berkshire Activewear On-line</a></li>
 				<li><a href="#">Letters from Warren E. Buffett Regarding Pledges to Make Gifts of Berkshire Stock</a> Updated August 30, 2012</li>
-			</ul>
-		</main>
-
-		<footer>
-			<hr>
-
-			<span>
-				<img src="../imgs/geico.png" alt="Geico Logo">
-				<p>FOR A FREE CAR INSURANCE RATE QUOTE THAT COULD SAVE YOU SUBSTANTIAL MONEY <a href="www.geico.com">WWW.GEICO.COM</a> OR CALL 1-888-395-6349, 24 HOURS A DAY</p>
-			</span>
-
-			<hr>
-
-			<p>If you have any comments about our WEB page, you can either write us at the address shown above or e-mail us at <a href="mailto:berkshire@berkshirehathaway.com">berkshire@berkshirehathaway.com</a>. However, due to the limited number of personnel in our corporate office, we are unable to provide a direct response.</p>
-
-			<hr>
-
+			 </ul>
+      	    </div>
+        </main>
+		
+   		<footer class="footer">
+        
+	   	<section class="geico-section">
+           	<div class="short-text">
+				<img src="http://www.berkshirehathaway.com/geicoimg.gif" alt="Geico Logo">
+				<p class="no-margin">FOR A FREE CAR INSURANCE RATE QUOTE THAT COULD SAVE YOU SUBSTANTIAL MONEY <a href="www.geico.com" class="small_link">WWW.GEICO.COM</a> OR CALL 1-888-395-6349, 24 HOURS A DAY</p>
+           	</div>
+	   	</section>
+         
+       	<section class="comments-section">       
+			<p>If you have any comments about our WEB page, you can either write us at the address shown above or e-mail us at <a href="mailto:berkshire@berkshirehathaway.com" class="small_link">berkshire@berkshirehathaway.com</a>. However, due to the limited number of personnel in our corporate office, we are unable to provide a direct response.</p>
+       	</section>   
+            
+      	<section class="disclaimer-section">
 			<p><a href="#">Legal Disclaimer</a></p>
 			<p>Copyright © 1978-2015 <strong>Berkshire Hathaway Inc.</strong></p>
-
+       	</section>
+            
+            
 		</footer>
 	</body>
 </html>
-
-<!-- 
-- What was it like to translate your previous learning with HTML into an actual site?
-- How was it researching and using semantic HTML5 elements?
-- How did you do at keeping to best practices (i.e. no formatting in the HTML)
-- What seems good and bad about HTML?
-- What tricks do you have for remembering how to write HTML?
-
-I have made a few simple website before, so I'm pretty familiar with how HTML works, and CSS as well, but it's nice to see something so complete.  It was quite satisfying actually.
-
-Researching and using semantic HTML is pretty intuitive for me - it's about the logical expression of meaning in addition to the visual representation.  Actually, thinking about it that way helps me to organize my thoughts and content better.  It's awesome!
-
-I think I was pretty good about separating the content from the formatting.  Having a little bit of experience with CSS actually helps, because you can kind of see how the formatting is going to be laid on top.  Also, I've seen sights that mix up formatting between the HTML and CSS, and that is INCREDIBLY annoying.  Thus, I try my best to keep them separate.
-
-In general, HTML is pretty tedious to work through.  Yes, going through the process can help you organize the content logically, but tagging everything is pretty boring.  On the other hand, when you consider what you're actually doing - rendering plain text into a browser - its pretty cool.
-
-No tricks for me; just practice.  And Google. :)
--->
