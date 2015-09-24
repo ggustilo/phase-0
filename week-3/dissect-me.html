@@ -1,0 +1,125 @@
+
+<!--
+What is an <html> tag?
+
+The html tag tells the browser the document is an html doc, and it is also the beginning of the DOM tree.
+
+What is a <head> tag?
+
+The head tag contains information about the document.
+
+What information should be in the <head> tag?
+
+Information such as the title of the page, meta tags, and links to other documents (such as CSS and JS) are contained in the head.
+
+What purpose does the <title> tag accomplish?
+
+The title tag holds the title of the page, which will show up in the browser tab.
+
+What information should live in the <body> tag?
+
+The content of the page will live in the body tag.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+	<h1>git life lessons</h1>
+  	<h4>September 11, 2015</h4>
+
+  <main>
+  	<section>
+			<p>Version control is the practice of recording and saving all the different versions of a project that might be created over the course of development. It is important to use version control so that we a) don't lose our shit, and have something to revert back to in case of stupidity; b) can see all the poor decisions that led us to our current state of being; c) can properly blame those responsible for f-ing up.  Or, you know, the opposite, if you're feeling positive.  We can a) go back to more streamlined versions of our product, if we decide retrospectively that certain features were 'not conducive to our product vision'; b) inspire everyone with our progress, and impress them with the number of commits we've made to get to our glorious present state; and c) heartily congratulate those who have contributed such spectacularly clean and beautiful code to our mother-load (or perhaps destroyed some heinous bug that was severely impacting our performance capabilities).</p>
+
+			<p>git - as a #1 a-ok version control system invented by the genius Linus Torvalds (after whom Linux is named) - can help us do all of these things.  Provided, of course, that you manage your repositories properly, commit on a regular basis, and don't push anywhere you're not supposed to.  AND, speaking of places to which we push code (or you know, blog posts), GitHub is a polished, popular, well-supported open-source project that can house all of your 'code in the clouds.'  And since we like polished, popular, open-source stuff, we shall use it!</p>
+
+			<p>I find it easiest to understand the inner workings of the git system through understanding the commands, so here are my notes on what git does:</p>
+	</section>
+	<article>
+		<h3>file tracked</h3>
+
+			<p>When you create a new file, you need to 'git add' for changes to be tracked.  Once you have added the file, changes are constantly tracked even if you haven't added them to the staging environment yet.</p>
+
+		<h3>file modified</h3>
+
+			<p>Modifications are changes in tracked files that have not yet been added to the stage.</p>
+
+		<h3>git add</h3>
+
+			<p>Once you add files to the staging environment, they are pre-packaged to be in your next commit unless removed.  To remove, type 'git reset HEAD'.</p>
+
+		<h3>git commit</h3>
+
+			<p>When you make a commit, you are essentially saying, "Ok, these changes are substantial and/or polished enough to be a new version of this project."  Commits are synonymous with versions.  They are local to the branch you are working on - i.e. you are creating a new version of your local branch.  They must be manually merged up the chain (or down as we shall see).</p>
+
+		<h3>git fetch</h3>
+
+			<p>If you are working on a team, it is quite possible that someone else has been working on the same thing and has submitted work upstream.  Thus, it is important to make sure that you have the most recent version of a branch before you begin working. Fetching a branch means, "Give me all the updates that have been made to this branch since I last looked at it."</p>
+
+		<h3>git merge</h3>
+
+			<p>Following from fetch, merge means "Now merge all these updates into my local copy so mine is completely up to date."</p>
+
+			<p>Coincidentally, merge is also used to get changes downstream.  So, you could be in your local master copy and say, "git merge downstream_branch," and thereby retrieve changes made a level below you.  For example, say you're working on a new feature, and after much work, it is done and you have a 'final' commit.  You then want to merge that feature up into your main (or master) branch.  Too bad! It doesn't work that way.  Sort of counter-intuitively, you have to merge down, not up.  So, you make sure your feature branch is all clean and tidy, and then you go into master.  From master, you say 'git merge feature-branch.'  This then pulls your new feature code up into the master.</p>
+
+		<h3>git pull</h3>
+
+			<p>'git pull' basically combines fetch and merge into one step.  Instead of saying, "Let me see these updates upstream and then merge then, let's do it all at once."</p>
+
+			<p>This also makes sense when you think about pull requests.  Say you're the administrator for THE master code branch of some software.  As we learned above, your devs are not allowed to just merge their code up into your master branch.  What if it was buggy and caused a big problem?  You have to grab their changes below and merge them in once you're sure it works properly.  It's top down, buddy; no messing around without proper review!  Thus, if you are a dev, you can't just merge up into the master branch; you have to <em>request</em> that your new feature be included.  Hence pull requests.  You are saying, "Pull me up into the master code base, please."</p>
+
+			<p>Note: When you're working locally on your own computer, you have control of both the local 'master' and the downstream branches.  Thus, you can act as your own admin and dev.</p>
+
+		<h3>git rebase</h3>
+
+			<p>Rebase is essentially another way - besides merge - to put two different commits together.  While merge takes branches and squishes them together, rebase has a slightly more elegant approach.  For example, you have been working on a feature intensely, and you haven't checked the master branch in a while.  When you do fetch those updates, you see the master branch has progressed quite a bit.  So, you can choose to merge those updates into your local version, sort of squishing them down on top - the old master, then all your changes/commits, then all the new stuff - and then creating a brand new commit with all three.  OR, you can rebase (literally, re - base: as in, put your changes on a new code base) your feature.  When you rebase, instead of squishing all these versions together, git is picking up all your commits off the old code base, copying them (yes, they're NEW now), and putting them down on top of the new code base - to make a fancy new updated feature branch.</p>
+
+			<p>The upside to rebasing is that it keeps your project history nice and linear.  The downside is that you can't rebase commits that have already been pushed into a public repository.  Git is <em>getting rid of</em> those old commits and making new ones, so it would look like part of your project history vanished.</p>
+			 
+		<h3>git push</h3>
+
+			<p>Pushing means you are leaving your local environment and pushing your work into a public repository, like those on Github.</p>
+
+		<h3>HEAD</h3>
+
+			<p>A HEAD is a commit.  Just HEAD means the current commit - the one you're working on.  HEAD^ means the last one, that you just made.  HEAD-n means the nth head ago.  These prior commits are sometimes called 'parents.'</p>
+
+		<h3>.</h3>
+
+			<p>The dot.  Also called source.  It means the current location or starting right here, where you are.  '. .' means up to your parent location - where you are and then were you were before that.  Hence, 'cd ..' .  Also, './continue/on/this/path' means starting here, continue along this path.</p>
+
+			<p>Semi-confusingly, if you put a shell script after . it means 'execute this script, please.'  So, there you go.</p>
+	</article>
+
+			<hr>	
+
+	<section>
+			<p>As I am just figuring out all of this stuff, please don't be too harsh if I got something wrong - but please do let me know.  Living in ignorance is no good.</p>
+
+			<p>Awesome resource: https://www.atlassian.com/git/tutorials</p>
+	</section>
+  </main>
+</body>
+</html>
+
+
+<!-- 
+What HTML5 tags have you used in this challenge and continue to return to often? Why?
+
+In this challenge, I used main, article and section.  I also often use nav, header, and footer - but that seemed unnecessary for this content.  In general, semantic tags help me organize my content better, for the browser and for myself.
+
+How do elements get laid out on a page? What is the order the browser uses to display elements?
+
+The browser displays elements in the order that they are written in the document, and as subject to CSS.
+
+What did you learn about Sublime in this challenge? Do you think you'll create more handy snippets at a later date? What about research some shortcuts that already exist?
+
+I learned that I still have to install a bunch of packages on Sublime, and that I still have many shortcuts to learn.  I think it's a bit early to be creating snippets.  There is already so much functionality in Sublime itself and in the various packages, it seems more efficient to make use of those resources first, before creating custom snippets.  However, as I become more proficient, I'm sure I will use them.  Especially once I begin working on projects that have similar pieces of code, snippets will undoubtedly become quite useful.
+
+-->
