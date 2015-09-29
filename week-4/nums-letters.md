@@ -16,7 +16,7 @@ puts 24 * 365
 
 #minutes_in_a_decade
 
-puts 60*24*365*10
+puts 60 * 24 * 365 * 10
 
 -----
 
