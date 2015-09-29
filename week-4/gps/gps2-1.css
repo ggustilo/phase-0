@@ -1,34 +1,30 @@
-
-
-body {
-  font-family: "Josefin Sans" sans-serif;
-}
+/*this is my css*/
 
 header {
    width: 100%; 
-   background-color: #FBCD35;
+   background-color: blue;
    padding: 2em;
 }
 
 .column-2, .column-1 {
-    width: 50%;
-    height: 1050px;
-}   
+    width: 77.5vh;
+    padding: 2em;
+}
 
 .column-1 {
-    background-color: #61C7B2;
+    background-color: beige;
     float: left;  
 }
 
 .column-2 {
-    background-color: #88ADA6;
+    background-color: gray;
     float: right;
+    height: 1045px;
 }
 
 footer {
     clear: both; 
     width: 100%;
-    background-color: #A502AD;
+    background-color:blue;
     padding: 2em;
 }
-
