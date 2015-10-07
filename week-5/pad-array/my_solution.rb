@@ -2,7 +2,7 @@
 
 # I worked on this challenge with Noah Heinrich.
 
-# I spent .5 hours on this challenge.
+# I spent .45 hours on this challenge.
 
 
 # Complete each step below according to the challenge directions and
