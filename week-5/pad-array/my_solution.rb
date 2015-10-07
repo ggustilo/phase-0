@@ -98,7 +98,7 @@ end
 
 # We were quite successful in breaking down the problem.  I like to write very detailed pseudocode, which forces me to think through the steps of the problem.
 
-# With such detailed pseudocode, writing the code becomes pretty straightforward.  My pseudocode does look very 'english' so sometimes its a bit of a step to decide what syntax to you.  For example, I had the if statements, but not the while loop explicitly called out.  My partner was helpful in pointing out its necessity.
+# With such detailed pseudocode, writing the code becomes pretty straightforward.  My pseudocode does look very 'english' so sometimes its a bit of a step to decide what syntax to use.  For example, I had the if statements, but not the while loop explicitly called out.  My partner was helpful in pointing out its necessity.
 
 # Our initial solution above does pass the tests, but we modified it a couple of times to be able to do so.  We had to add the return statements, and then for the non-destructive version, we added the .dup to make sure we weren't modifying the passed array.
 
