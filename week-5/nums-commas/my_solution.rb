@@ -25,8 +25,8 @@
 # 		reverse array
 # 		create new array
 # 		until array is empty
-# 			slice array every three numbers
-# 			add slice to new array
+# 			take three numbers at a time
+# 			add the three-number section to the new array
 # 			add comma to new array
 # 		create final array
 # 		set final array equal to reversed new array
@@ -67,11 +67,33 @@ def separate_comma(num)
 	end
 end
 
+# Trying to get that one-liner...not working
+
 # def separate_comma(num)
 # 	num >= 999 ? num.to_s.split('').reverse.each_slice(3) : num.to_s
 # end
 
 # 3. Reflection
+
+# Prompt:
+
+# What was your process for breaking the problem down? What different approaches did you consider?
+# Was your pseudocode effective in helping you build a successful initial solution?
+# What Ruby method(s) did you use when refactoring your solution? What difficulties did you have implementing it/them? Did it/they significantly change the way your code works? If so, how?
+# How did you initially iterate through the data structure?
+# Do you feel your refactored solution is more readable than your initial solution? Why?
+
+# Reflection:
+
+# My process for breaking the problem down was to start with base cases - what happens if the number is less than 4 digits (doesn't need a comma) and then to consider how we add commas - starting from the rear of the number.  We also get the number as an integer, and they want it output as a string, which indicated to me that there was probably supposed to be an array in there somewhere.
+
+# My pseudocode was pretty detailed, so translating it into code wasn't too difficult.  I just had to think through how the data was changing as we went along.
+
+# So, I used pretty much the same methods for the initial solution and the refactored solution.  I just tightened up the latter a little bit.  But the way that I approached the problem made certain methods seem obvious.  The only new one that got added in the refactored solution was push, which eliminated the need for the second line of the until loop.  It was very easy to use.
+
+# I iterated through the data structure using slices both times.  I knew I wanted sets of three, so that just seemed like the best way to do it.  I could have done a pop.times(3) then added a comma or something, but slice is so much cleaner and it just makes more sense.  Ruby is pretty intuitive, so trying to get around obvious methods is more difficult.
+
+# I think the refactored solution is about the same as the initial.  It might be a bit more dense, because the method chains are longer, but I think its just as readable.
 
 
 
