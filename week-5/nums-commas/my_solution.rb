@@ -51,10 +51,28 @@ def separate_comma(num)
 	end
 end
 
-# separate_comma(9876543)
-
 
 # 2. Refactored Solution
 
+def separate_comma(num)
+	if num >= 999
+		array = num.to_s.split('').reverse
+		new_array = []
+		until array.empty?
+			new_array.push(array.slice!(0..2)).push(",")
+		end
+		new_array.pop
+		final_array = new_array.flatten.reverse.join
+	else num.to_s
+	end
+end
+
+# def separate_comma(num)
+# 	num >= 999 ? num.to_s.split('').reverse.each_slice(3) : num.to_s
+# end
 
 # 3. Reflection
+
+
+
+
