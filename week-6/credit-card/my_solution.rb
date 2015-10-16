@@ -1,8 +1,8 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge with Ronny Ewanek.
+# I spent 2 hours on this challenge.
 
 # For this challenge, you will need to break down the algorithm into the following steps. You will probably want to break these down into individual methods that are called when you run the #check_card method.
 
@@ -63,75 +63,74 @@
 
 # Initial Solution
 
-
-# class CreditCard
+class CreditCard
   
-#   def initialize(cc_num)
-#     if cc_num.to_s.size == 16
-#       @cc_num = cc_num
-#     else raise ArgumentError
-#     end
-#   end
-#   #step1 
-#   def cc_array
-#    #create array from numbers
-#     @cc_num_array = @cc_num.to_s.split('').to_a
-#     #reverse array
-#     @reverse_array = @cc_num_array.reverse!
-#     p @reverse_array
-#   end
+  def initialize(cc_num)
+    if cc_num.to_s.size == 16
+      @cc_num = cc_num
+    else raise ArgumentError
+    end
+  end
+  #step1 
+  def cc_array
+   #create array from numbers
+    @cc_num_array = @cc_num.to_s.split('').to_a
+    #reverse array
+    @reverse_array = @cc_num_array.reverse!
+    p @reverse_array
+  end
   
-#   def double_nums
-#     #from index[1], double every odd number    
-#     @reverse_array.map!.with_index do | num, index |
-#       if index.odd?
-#         num.to_i * 2
-#       else
-#         num.to_i
-#       end
-#     end
-#     @doubled_reverse_array = @reverse_array
-#     p @doubled_reverse_array
-#   end
+  def double_nums
+    #from index[1], double every odd number    
+    @reverse_array.map!.with_index do | num, index |
+      if index.odd?
+        num.to_i * 2
+      else
+        num.to_i
+      end
+    end
+    @doubled_reverse_array = @reverse_array
+    p @doubled_reverse_array
+  end
   
-#   #step2
-#   def single_int
-#     #iterate array and turn element into string
-#     @doubled_reverse_array.map! do |element|
-#       element.to_s
-#     end  
-#      #smoosh strings together 
-#     #split apart by digit
-#     @doubled_reverse_array = @doubled_reverse_array.reduce(:+).split('')
-#      #convert back to integer
-#     @doubled_reverse_array_by_digit = @doubled_reverse_array.map! {|num| num.to_i}
-#     p @doubled_reverse_array_by_digit
-#   end
+  #step2
+  def single_int
+    #iterate array and turn element into string
+    @doubled_reverse_array.map! do |element|
+      element.to_s
+    end  
+     #smoosh strings together 
+    #split apart by digit
+    @doubled_reverse_array = @doubled_reverse_array.reduce(:+).split('')
+     #convert back to integer
+    @doubled_reverse_array_by_digit = @doubled_reverse_array.map! {|num| num.to_i}
+    p @doubled_reverse_array_by_digit
+  end
 
-#   #step3
-#   def num_check
-#     sum = @doubled_reverse_array_by_digit.reduce(:+)
-#     p sum
-#   #sum using reduce 
-#     if sum % 10 == 0
-#       p true
-#     else
-#       p false
-#     end
-#   end
-#   #if sum dived by 10 has no remander, return true
+  #step3
+  def num_check
+    sum = @doubled_reverse_array_by_digit.reduce(:+)
+    p sum
+  #sum using reduce 
+    if sum % 10 == 0
+      p true
+    else
+      p false
+    end
+  end
+  #if sum dived by 10 has no remander, return true
   
-#   def check_card
-#     self.cc_array
-#     self.double_nums
-#     self.single_int
-#     self.num_check
-#   end
+  def check_card
+    self.cc_array
+    self.double_nums
+    self.single_int
+    self.num_check
+  end
 
-# end
+end
 
-# gabi_number = CreditCard.new(4563960122001999)
-# gabi_number.check_card
+gabi_number = CreditCard.new(4563960122001999)
+gabi_number.check_card
 
 
 # Refactored Solution
@@ -157,18 +156,18 @@ class CreditCard
         num.to_i
       end
     end
-    @doubled_reverse_array = @cc_array
+    @doubled_array = @cc_array
   end
   
   def single_int
-    @doubled_reverse_array.map! do |element|
+    @doubled_array.map! do |element|
       element.to_s
     end  
-    @doubled_reverse_array = @doubled_reverse_array.reduce(:+).split('').map! {|num| num.to_i}
+    @doubled_array = @doubled_array.reduce(:+).split('').map! {|num| num.to_i}
   end
 
   def num_check
-    sum = @doubled_reverse_array.reduce(:+)
+    sum = @doubled_array.reduce(:+)
     if sum % 10 == 0
       p true
     else
@@ -187,4 +186,17 @@ end
 
 gabi_number = CreditCard.new(4563960122001999)
 gabi_number.check_card
+
+# Reflection:
+
+# What was the most difficult part of this challenge for you and your pair?
+# What new methods did you find to help you when you refactored?
+# What concepts or learnings were you able to solidify in this challenge?
+
+# The most difficult part of this challenge was by far figuring out how to pass information between the methods, and writing the driver method check_card.  We weren't sure how much to have check_card do, versus just automatically moving information through the methods without arguments.  We ended up with a solution much closer to the latter strategy, although to be honest, I don't know why it all wasn't just one method - check credit card number.  Without arguments, the methods aren't super reusable, but it didn't make sense that they would be, because they're really specific steps for a very specific purpose.
+
+# Honestly, I don't think we used any new methods when refactoring.  I just went through and cleaned up the code - using longer method chains and fewer instance variables.  I'm still not sure that was a good idea...
+
+# This challenge confused me more than solidified any particular concepts.  I mean, I did use instance variables extensively, and playing with that was useful. However, I just didn't really agree with this strategy of breaking up the solution into several methods.  Maybe they meant use attribute methods or shortcuts and then have a big method for the checking, but that's not how I understood the instructions.  So...yea, interesting challenge and we passed the tests, but I still have the feeling I just misunderstood something...
+
 
