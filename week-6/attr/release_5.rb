@@ -4,28 +4,6 @@
 
 # Your Code Here:
 
-class NameData
-  attr_accessor :name
-
-  def initialize
-    @name = "Gabi"
-  end
-end
-
-class Greetings
-
-  def initialize
-  @instance = NameData.new
-  end
-
-  def hello
-    puts "Hey there, #{@instance.name}!"
-  end
-
-end
-
-greet = Greetings.new
-greet.hello
 
 class Profile
 # first let's finish refactoring this code

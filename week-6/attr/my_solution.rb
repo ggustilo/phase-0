@@ -4,16 +4,41 @@
 
 # I spent [#] hours on this challenge.
 
+# Pseudocode:
+# open class NameData
+# 	create attr_accessor for name
+# 	define initialize method
+# 	create instance variable with my name
+# open class Greetings
+# 	define initialize method
+# 	create instance variable which is equal to new NameData object
+# 	define hello method
+# 	put message
+# write driver code
+
+
 class NameData
+  attr_accessor :name
 
+  def initialize
+    @name = "Gabi"
+  end
 end
-
 
 class Greetings
 
+  def initialize
+  @instance = NameData.new
+  end
+
+  def hello
+    puts "Hey there, #{@instance.name}!"
+  end
+
 end
 
-
+greet = Greetings.new
+greet.hello
 
 # # Reflection
 
