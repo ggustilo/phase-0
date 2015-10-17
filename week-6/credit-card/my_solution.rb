@@ -145,34 +145,24 @@ class CreditCard
   end
  
   def cc_array
-    @cc_array = @cc_num.to_s.split('').to_a.reverse!
+    @cc_array = @cc_num.to_s.chars.reverse!
   end
   
   def double_nums  
     @cc_array.map!.with_index do | num, index |
-      if index.odd?
-        num.to_i * 2
-      else
-        num.to_i
-      end
+      index.odd? ? num.to_i * 2 : num.to_i
     end
     @doubled_array = @cc_array
   end
   
   def single_int
-    @doubled_array.map! do |element|
-      element.to_s
-    end  
+    @doubled_array.map! {|element| element.to_s}
     @doubled_array = @doubled_array.reduce(:+).split('').map! {|num| num.to_i}
   end
 
   def num_check
     sum = @doubled_array.reduce(:+)
-    if sum % 10 == 0
-      p true
-    else
-      p false
-    end
+    sum % 10 == 0 ? true : false
   end
   
   def check_card
