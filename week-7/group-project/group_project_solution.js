@@ -7,8 +7,8 @@
 
 // USER STORIES:
 
-// As a user, I want to be able to find the sum of any array comprised of integers by calling a function called 'sum'.
+// As a user, I want to be able to find the sum of any ordered collection of random integers by calling a function called 'sum'.
 
-// As a user, I want to be able to find the mean of any array comprised of integers by calling a function called 'mean'.
+// As a user, I want to be able to find the mean of any ordered collection of random integers by calling a function called 'mean'.
 
-// As a user, I want to be able to find the median of any array comprised of integers by calling a function called 'median'.
+// As a user, I want to be able to find the median of of any ordered collection of random integers by calling a function called 'median'.
