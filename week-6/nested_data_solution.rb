@@ -68,6 +68,20 @@ end
 
 p startup_names
 
+# Bonus refactor:
+
+def startup_names(names)
+ names.map! do |element|
+   if item.respond_to?(:map!)
+     startup_names(element)
+   else
+     item += "ly"
+   end
+ end
+end
+
+p startup_names
+
 # Reflection:
 
 # What are some general rules you can apply to nested arrays?
