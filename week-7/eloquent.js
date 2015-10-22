@@ -1,6 +1,6 @@
 // Eloquent JavaScript
 
-// Run this file in your terminal using `node my_solution.js`. Make sure it works before moving on!
+// Run this file in your terminal using `node eloquent.js`. Make sure it works before moving on!
 
 // Program Structure
 // Write your own variable and do something to it.
