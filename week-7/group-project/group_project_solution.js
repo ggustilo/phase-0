@@ -1,4 +1,4 @@
-// Release 1: Tests to User Stories
+// Release 1: Tests to User Stories - Gabrielle Gustilo
 // Look at the tests.js file in this directory.
 
 // Based on the tests, write user stories that describe what the code needs to do. User stories take the following format:
@@ -14,7 +14,8 @@
 // As a user, I want to be able to find the median of of any ordered collection of random integers by calling a function called 'median'.
 
 
-//Release 2: User Stories to Pseudocode
+//Release 2: User Stories to Pseudocode - Jeremy Powell
+
 // Based only on the user stories you received from the first person, pseudocode the logic you would need to implement each story. Your pseudocode should be small steps that can be easily translated into code.
 //
 
@@ -39,3 +40,11 @@
 // want[3]&[4] 8/2=[4], (8/2)-1= [3],
 // oddExample [0,1,2,3, 4, 5,6,7,8] length=9
 // want[4] 9/2=4.5. use math method to get whole number
+
+//Release 3: Pseudocode to Code - Joe Marion
+
+//Release 4: Refactor and Translate to User Stories - Alex Blair 
+
+//Note: Persons 3 & 4 did not submit their portions of the challenge to Person 1 by 12:30 pm on Monday 10/26.  If they do so by the end of the day, I  will resubmit this challenge.  Otherwise, let it be known that Person 1 finished their portion on Wednesday at 4:30 pm the week before, and Person 2 on Friday at 3 pm.
+
+//Since there is no code, I have no comments regarding whether or not it passed the tests.
