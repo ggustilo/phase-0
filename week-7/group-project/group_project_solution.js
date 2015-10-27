@@ -43,8 +43,37 @@
 
 //Release 3: Pseudocode to Code - Joe Marion
 
+function sum(numbers) {
+  var answer = 0;
+  for (var i = 0; i < numbers.length; i++) {
+     answer += numbers[i];
+  }
+  return answer
+}
+
+function mean(numbers) {
+  return sum(numbers) / numbers.length;
+}
+
+
+function median(numbers) {
+  var sortedNum = numbers.sort(function(a,b){return a - b});
+  var half = (Math.floor(sortedNum.length / 2.0));
+  if (sortedNum.length % 2 === 0) {
+    return (sortedNum[half] + sortedNum[half - 1]) / 2;
+  } else {
+    return sortedNum[half];
+  }
+}
+
+var ranArray = [10, 11, 12, 13, 14]
+
+console.log(median(ranArray))
+
 //Release 4: Refactor and Translate to User Stories - Alex Blair 
 
 //Note: Persons 3 & 4 did not submit their portions of the challenge to Person 1 by 12:30 pm on Monday 10/26.  If they do so by the end of the day, I  will resubmit this challenge.  Otherwise, let it be known that Person 1 finished their portion on Wednesday at 4:30 pm the week before, and Person 2 on Friday at 3 pm.
 
 //Since there is no code, I have no comments regarding whether or not it passed the tests.
+
+//UPDATE: Person 3 submitted Release 3 as of the end of Monday, and the code passed all tests.  Yay! :)
