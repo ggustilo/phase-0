@@ -117,11 +117,6 @@ officers['treasurer'] = 'Ivy';
 //   increment this new property by one
   
   
-//   return?
-  
-  
-
-
 function countVote () {
   
 //   var record = {};
