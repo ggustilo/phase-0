@@ -18,32 +18,32 @@ var scores = [ [80, 70, 70, 100],
 // __________________________________________
 // Write your code below.
 
-// var gradebook = {};
+var gradebook = {};
 
-// gradebook['Joseph'] = {};
-// gradebook['Susan'] = {};
-// gradebook['William'] = {};
-// gradebook['Elizabeth'] = {};
+gradebook['Joseph'] = {};
+gradebook['Susan'] = {};
+gradebook['William'] = {};
+gradebook['Elizabeth'] = {};
 
-// gradebook['Joseph'].testScores = scores[0];
-// gradebook['Susan'].testScores = scores[1];
-// gradebook['William'].testScores = scores[2];
-// gradebook['Elizabeth'].testScores = scores[3];
+gradebook['Joseph'].testScores = scores[0];
+gradebook['Susan'].testScores = scores[1];
+gradebook['William'].testScores = scores[2];
+gradebook['Elizabeth'].testScores = scores[3];
 
-// gradebook.addScore = function(name, score) {
-//   gradebook[name].testScores[gradebook[name].testScores.length] = score;
-// }
+gradebook.addScore = function(name, score) {
+  gradebook[name].testScores[gradebook[name].testScores.length] = score;
+}
 
-// gradebook.getAverage = function(name) {
-//   var score = average(gradebook[name].testScores);
-//   return score;
-// }
+gradebook.getAverage = function(name) {
+  var score = average(gradebook[name].testScores);
+  return score;
+}
 
-// function average(array) {
-//   var sum = array.reduce(function(a,b){return a+b;});
-//   var average = sum/array.length;
-//   return average;
-// }
+function average(array) {
+  var sum = array.reduce(function(a,b){return a+b;});
+  var average = sum/array.length;
+  return average;
+}
 
 // __________________________________________
 // Refactored Solution
