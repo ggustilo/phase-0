@@ -50,7 +50,7 @@ ORDER BY region_id;
 
 My Schema:
 
-<img src="/outfits_schema.tiff">
+<img src="/outfits_schema.jpeg">
 
 Reflection:
 
