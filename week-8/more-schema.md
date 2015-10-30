@@ -2,13 +2,13 @@
 
 ##Release 2: One to One
 
-<img src="/imgs/one_to_one_schema.jpg">
+<img src="imgs/one_to_one_schema.jpg">
 
 This schema represents a database with two tables that have a one to one relationship.  This relationship indicates that for every value in one table, there is one - and only one - corresponding value in the other table.  The example depicts one table that holds basic information about products, such as might be seen in product search results - just the name, price, manufacturer, materials, delivery, and the search terms it falls under.  The second table stores more detailed information about the same products, such as a might be seen if you clicked on a product for more information - maybe a photo, a text description, its availability, dimensions and reviews.  Because the tables carry information about the same products, they have a one to one relationship.
 
 ##Release 4: Many to Many
 
-<img src="/imgs/many_to_many_schema.jpg">
+<img src="imgs/many_to_many_schema.jpg">
 
 This schema represents a database with two main table that have a many to many relationship, which necessitates the creation of a join table as well.  The two main tables hold information for grocery lists and items that might be included on a grocery list. The join table can display information from both main tables by keeping track of their primary keys, and applying filters.
 
